@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -12,7 +12,7 @@ body {
   margin: 0;
   background: whitesmoke;
 }
-#navbar {
+.navbar {
   background: whitesmoke;
   color: black;
   height: 15vh;
@@ -27,53 +27,69 @@ body {
   width: 100%;
   z-index: 100;
 }
-.logo-container {
-  display: flex;
-  align-items: center;
-  margin: 30px;
-}
-#navbar .logo {
+.navbar .logo {
+  font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
-  color: black;
-  width: 120px;
-  padding: 20px;
+  background: -webkit-linear-gradient(blue, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 20px;
 }
-#header img {
-  display: inline;
-}
-#navbar .logo {
-  font-weight: 600;
-  font-size: 6rem;
-  display: inline-block;
-}
-#navbar .nav-link {
+.navbar .nav-link {
   color: black;
   margin: 20px;
   font-size: 2rem;
   text-decoration: none;
   flex-direction: column;
-  display: none;
 }
-@media screen and (min-width: 767px) {
-  #navbar #header-img {
+#nav-bar {
+  position: fixed;
+  background: whitesmoke;
+  top: -100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s;
+  z-index: 100;
+}
+.fa-bars {
+  cursor: pointer;
+}
+.active {
+  top: 4.9rem;
+}
+@media screen and (min-width: 600px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar .logo {
     font-size: 5rem;
     margin: 20px;
   }
-  #navbar .nav-link {
+  .navbar .nav-link {
     display: inline;
     margin: 50px;
   }
   .fa-bars {
     display: none;
   }
+  .nav-bar {
+    position: static;
+    display: inline;
+    background: none;
+    width: fit-content;
+  }
 }
 #introduction {
-  background: whitesmoke; 
+  background: whitesmoke;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-left: 30px;
 }
 #welcome-section {
@@ -103,7 +119,7 @@ body {
   box-shadow: 6px 6px 6px#90adc6, 2px 2px 2px #e9eaec;
   border-radius: 20px;
   margin-top: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 #skills {
   display: block;
@@ -120,7 +136,7 @@ body {
   box-shadow: 6px 6px 6px#90adc6, 2px 2px 2px #e9eaec;
   border-radius: 20px;
   margin-top: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 #projects {
@@ -138,7 +154,7 @@ body {
   box-shadow: 6px 6px 6px#90adc6, 2px 2px 2px #e9eaec;
   border-radius: 20px;
   margin-top: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 #projects img {
   width: 500px;
@@ -159,9 +175,14 @@ body {
   box-shadow: 6px 6px 6px#90adc6, 2px 2px 2px #e9eaec;
   border-radius: 20px;
   margin-top: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 #profile-link {
   margin: 10px;
   text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  #img {
+    width: 50%;
+  }
 }
