@@ -183,6 +183,6 @@ body {
 }
 @media screen and (max-width: 767px) {
   #img {
-    width: 50%;
+    width: 100%;
   }
 }
