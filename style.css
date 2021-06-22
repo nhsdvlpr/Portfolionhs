@@ -184,8 +184,9 @@ body {
 @media screen and (max-width: 767px) {
   #img {
     width: 350px;
+    margin-top: 10px;
   }
   #projek {
-    width: 150px;
+    width: 300px;
   }
 }
